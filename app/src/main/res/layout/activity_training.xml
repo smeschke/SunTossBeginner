@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.stephen.acer.suntossbeginner.training">
+
+    <!--this layout is broken into a top and bottom half
+    this seperations is accomplished by using two
+    constraint layouts with equal weights of 1.-->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+         - This Guideline divides the screen into a
+         left half and a right half and is used to
+         anchor the views to the middle of the screen.
+         It's actually a little left of center.
+         - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <android.support.constraint.Guideline
+            android:id="@+id/horizontal_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.45"
+            tools:layout_editor_absoluteX="192dp"
+            tools:layout_editor_absoluteY="0dp" />
+        <!--trick name-->
+        <TextView
+            android:id="@+id/trick_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="this is test text"
+            android:textSize="20sp"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintLeft_toLeftOf="@+id/horizontal_middle"
+            app:layout_constraintRight_toRightOf="parent" />
+        <!--.gif of trick-->
+        <VideoView
+            android:id="@+id/trick_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/horizontal_middle"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--personal record-->
+        <TextView
+            android:id="@+id/personal_record_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/primary_text"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toBottomOf="@+id/trick_image"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintLeft_toLeftOf="@+id/horizontal_middle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/trick_name_text_view"
+            tools:text="personal record" />
+        <!--goal-->
+        <TextView
+            android:id="@+id/goal_catches_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/secondary_text"
+            android:textSize="28sp"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintLeft_toLeftOf="@+id/personal_record_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/personal_record_text_view"
+            tools:text="goal" />
+        <!--end of top half-->
+    </android.support.constraint.ConstraintLayout>
+    <!--beginning of bottom half-->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical">
+        <!--update record-->
+        <Button
+            android:layout_width="128dp"
+            android:layout_height="64dp"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:onClick="increment_method"
+            android:text="Update Record"
+            android:textSize="18dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--go to next trick-->
+        <Button
+            android:layout_width="128dp"
+            android:layout_height="64dp"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="nextTrick"
+            android:text="Go to Next Trick"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+        <!--number picker for ones-->
+        <NumberPicker
+            android:id="@+id/numberPickerOnes"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:background="@color/colorPrimaryLight"
+            app:layout_constraintRight_toRightOf="parent" />
+        <!--number picker for tens-->
+        <NumberPicker
+            android:id="@+id/numberPickerTens"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:background="@color/colorPrimaryLight"
+            app:layout_constraintRight_toLeftOf="@id/numberPickerOnes" />
+        <!--number picker for 100's-->
+        <NumberPicker
+            android:id="@+id/numberPickerHundreds"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_margin="11dp"
+            android:background="@color/colorPrimaryLight"
+            app:layout_constraintRight_toLeftOf="@id/numberPickerTens" />
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

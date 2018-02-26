@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?><!--This activity displays a digital badge.
+This badge displays the user's current level,
+and information about the users progress.-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.stephen.acer.suntossbeginner.badge">
+    <!--juggler's name -->
+    <TextView
+        android:id="@+id/jugglers_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Juggler Name"
+        android:textSize="38dp"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+    <TextView
+        android:id="@+id/levelId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Is level #: 3 Juggler"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jugglers_name" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalCatchesTextView"
+        app:layout_constraintTop_toBottomOf="@id/levelId"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <!--level image-->
+    <ImageView
+        android:id="@+id/levelImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/five"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/levelId" />
+    <!--trick data (long text view)-->
+    <TextView
+        android:id="@+id/trick_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:textColor="@color/colorPrimaryLight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/levelId" />
+
+</android.support.constraint.ConstraintLayout>

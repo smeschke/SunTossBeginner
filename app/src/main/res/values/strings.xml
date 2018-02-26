@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">SunToss</string>
+    <!--list of juggling patterns-->
+    <string-array name="patterns">
+        <!--index starts at one-->
+        <item>please ignore, this is a workaround</item>
+        <item>One Ball</item>
+        <item>Two Balls</item>
+        <item>Three Ball Cascade</item>
+        <item>Three Balls: 423</item>
+        <item>Two in Right Hand</item>
+        <item>Two in Left Hand</item>
+        <item>Four Ball Fountain</item>
+        <item>Three Balls: 441</item>
+        <item>Three Balls: 531</item>
+        <item>Four Balls: 552</item>
+        <item>Five Ball Cascade</item>
+        <item>Four Balls: 55514</item>
+    </string-array>
+    <!--list of goals (number of goal catches-->
+    <integer-array name="goals">
+        <item>100</item>
+        <item>100</item>
+        <item>100</item>
+        <item>80</item>
+        <item>50</item>
+        <item>50</item>
+        <item>50</item>
+        <item>60</item>
+        <item>50</item>
+        <item>60</item>
+        <item>40</item>
+        <item>20</item>
+        <item>15</item>
+        <item>50</item>
+    </integer-array>
+    <!--difficulty of eacy level relative to the goal-->
+    <integer-array name="levels">
+        <item>8</item>
+        <item>4</item>
+        <item>2</item>
+        <item>1</item>
+    </integer-array>
+
+</resources>

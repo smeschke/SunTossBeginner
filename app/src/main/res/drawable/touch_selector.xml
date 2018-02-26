@@ -1,0 +1,16 @@
+<!--Set up Touch Selector for the "tricks" list items.
+    So much more elegant UI.--><!-- This selector works everywhere, but does not support ripple -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--There are a ton of states the descripe how the
+        user's finger is interacting with the list on the screen.-->
+    <item android:drawable="@color/activated" android:state_activated="true" android:state_focused="false" />
+    <item android:drawable="@color/background_material_light" android:state_window_focused="false" />
+    <!--so many options-->
+    <item android:drawable="@drawable/abc_list_selector_holo_light" android:state_enabled="false" android:state_focused="true" android:state_pressed="true" />
+    <item android:drawable="@drawable/abc_list_selector_holo_light" android:state_enabled="false" android:state_focused="true" />
+    <item android:drawable="@drawable/abc_list_selector_holo_light" android:state_focused="true" android:state_pressed="true" />
+    <item android:drawable="@drawable/abc_list_selector_holo_light" android:state_focused="false" android:state_pressed="true" />
+    <item android:drawable="@drawable/abc_list_selector_holo_light" android:state_focused="true" />
+    <!-- User is juggling, finger not in screen -->
+    <item android:drawable="@color/background_material_light" />
+</selector>

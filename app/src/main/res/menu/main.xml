@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--action_search should actually be 'settings'
+        but, then I would have to change it in MainActivity too-->
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        android:title="settings"/>
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        android:title="about"/>
+</menu>

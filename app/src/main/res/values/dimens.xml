@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--constant dimentional values used throughout the app-->
+<resources>
+    <!--these text sizes need to get changed to sp from dp-->
+    <dimen name="list_icon">40dp</dimen>
+    <dimen name="numCatches_text_size">28dp</dimen>
+    <dimen name="goal_text_size_small">16dp</dimen>
+    <dimen name="list_item_icon_margin_right">24dp</dimen>
+    <dimen name="list_item_icon_margin_end">@dimen/list_item_icon_margin_right</dimen>
+    <dimen name="list_item_padding_horizontal">16dp</dimen>
+    <dimen name="loading_indicator_size">42dp</dimen>
+    <dimen name="list_item_padding_vertical">12dp</dimen>
+    <dimen name="list_item_trickName_left_margin">16dp</dimen>
+    <dimen name="list_item_trickName_start_margin">@dimen/list_item_trickName_left_margin</dimen>
+
+</resources>

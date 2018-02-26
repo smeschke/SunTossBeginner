@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?><!--Settings activity for users to update name or clear data.-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.stephen.acer.suntossbeginner.settings">
+    <!--"Name" - static text-->
+    <TextView
+        android:id="@+id/saysName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="12dp"
+        android:text="Name"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+    <!--Displays the name currently entered in SharedPref-->
+    <TextView
+        android:id="@+id/jugglers_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:text="--none entered--"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/enter_name_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/saysName" />
+    <!--Button to update name-->
+    <Button
+        android:id="@+id/enter_name_button"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_margin="8dp"
+        android:onClick="enterName"
+        android:padding="8dp"
+        android:text="Update\nName"
+        app:layout_constraintRight_toRightOf="parent" />
+    <!--horizontal line-->
+    <TextView
+        android:id="@+id/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_margin="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enter_name_button" />
+    <!--clear saved data button-->
+    <Button
+        android:id="@+id/clearData"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_margin="16dp"
+        android:onClick="deleteData"
+        android:text="Clear All Saved Data"
+        android:textSize="16dp"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line" />
+</android.support.constraint.ConstraintLayout>
+
+
+

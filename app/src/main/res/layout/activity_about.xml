@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.stephen.acer.suntossbeginner.about">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="SunToss"
+            android:textAlignment="center"
+            android:textSize="68dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textSize="16dp"
+            android:text="This is an app that helps beginners learn to juggle.\n\nTo use the app, tap on one of the tricks. This will take you to a training
+ activity screen. On the training activity screen, you can see an animation of the trick.
+Try it for yourself! Enter your personal record using the scroll wheels in the bottom
+ right hand corner of the screen. Press update record when you are done.
+\n\nAs you personal record creep toward the goals, your level will increase. Try to get to level 5!
+\n\nThe animations come from gunswap.co.
+\n\nThis is the beginner verson of sunswap. An intermediate and advanced versions are also avaliable."/>
+    </LinearLayout>
+</ScrollView>

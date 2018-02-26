@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.stephen.acer.suntossbeginner">
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/five"
+        android:label="@string/app_name"
+        android:launchMode="singleTop"
+        android:roundIcon="@drawable/five"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.Main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".training"
+            android:label="Training"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".settings"
+            android:label="Settings"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".badge"
+            android:label="Digital Badge"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".about"
+            android:label="About"></activity>
+    </application>
+
+</manifest>
