@@ -49,13 +49,10 @@ public class training extends AppCompatActivity {
         //Set the minimum value of NumberPicker
         NumberPicker np = (NumberPicker) findViewById(R.id.numberPickerOnes);
         NumberPicker npT = (NumberPicker) findViewById(R.id.numberPickerTens);
-        NumberPicker npH = (NumberPicker) findViewById(R.id.numberPickerHundreds);
         np.setMinValue(0);
         np.setMaxValue(9);
         npT.setMinValue(0);
-        npT.setMaxValue(9);
-        npH.setMinValue(0);
-        npH.setMaxValue(9);
+        npT.setMaxValue(40);
 
         //set up text views
         TextView trick_name_text_view = (TextView) findViewById(R.id.trick_name_text_view);
@@ -63,44 +60,19 @@ public class training extends AppCompatActivity {
         TextView personalRecordTextView = (TextView) findViewById(R.id.personal_record_text_view);
 
         //start playing gif
+        Integer[] gif_trick_list = {R.raw.five_five_five_one_four,//workaround
+                R.raw.one_ball, R.raw.five_zero_zero_zero_zero, R.raw.four_two_zero,
+                R.raw.four_four_zero_zero, R.raw.two_balls, R.raw.two_balls_right,
+                R.raw.two_balls_left, R.raw.four_one_one_two_two, R.raw.four_two_three,
+                R.raw.four_four_one, R.raw.three_balls, R.raw.three_four_zero_one_two,
+                R.raw.four_ball_fountain, R.raw.five_two_two, R.raw.five_zero_one,
+                R.raw.five_two_five_one_two, R.raw.five_three_one, R.raw.five_five_two,
+                R.raw.five_ball_cascade, R.raw.five_five_five_one_four, R.raw.one_two_three_four_five};
         VideoView videoView = (VideoView) findViewById(R.id.trick_image);
-        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.five_ball_cascade);
-        if (index == 1) {
-            uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.one_ball);
-        }
-        if (index == 2) {
-            uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.two_balls);
-        }
-        if (index == 3) {
-            uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.three_balls);
-        }
-        if (index == 4) {
-            uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.four_two_three);
-        }
-        if (index == 5) {
-            uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.two_balls_right);
-        }
-        if (index == 6) {
-            uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.two_balls_left);
-        }
-        if (index == 7) {
-            uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.four_ball_fountain);
-        }
-        if (index == 8) {
-            uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.four_four_one);
-        }
-        if (index == 9) {
-            uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.five_three_one);
-        }
-        if (index == 10) {
-            uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.five_five_two);
-        }
-        if (index == 11) {
-            uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.five_ball_cascade);
-        }
-        if (index == 12) {
-            uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.five_five_five_one_four);
-        }
+        //Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.five_ball_cascade);
+        String s = "android.resource://" + getPackageName() + "/" + gif_trick_list[index];
+        Uri uri = Uri.parse(s);
+
 
 
         videoView.setVideoURI(uri);
@@ -137,8 +109,7 @@ public class training extends AppCompatActivity {
         //listen to number picker
         NumberPicker npO = (NumberPicker) findViewById(R.id.numberPickerOnes);
         NumberPicker npT = (NumberPicker) findViewById(R.id.numberPickerTens);
-        NumberPicker npH = (NumberPicker) findViewById(R.id.numberPickerHundreds);
-        num_catches = npO.getValue() + npT.getValue() * 10 + npH.getValue() * 100;
+        num_catches = npO.getValue() + npT.getValue() * 10;
 
         //calculate the new number of catches
         int new_total = previous_total + num_catches;

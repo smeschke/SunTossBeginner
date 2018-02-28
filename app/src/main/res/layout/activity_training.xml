@@ -110,7 +110,7 @@
         <!--number picker for ones-->
         <NumberPicker
             android:id="@+id/numberPickerOnes"
-            android:layout_width="48dp"
+            android:layout_width="64dp"
             android:layout_height="match_parent"
             android:layout_margin="12dp"
             android:background="@color/colorPrimaryLight"
@@ -123,13 +123,5 @@
             android:layout_margin="12dp"
             android:background="@color/colorPrimaryLight"
             app:layout_constraintRight_toLeftOf="@id/numberPickerOnes" />
-        <!--number picker for 100's-->
-        <NumberPicker
-            android:id="@+id/numberPickerHundreds"
-            android:layout_width="48dp"
-            android:layout_height="match_parent"
-            android:layout_margin="11dp"
-            android:background="@color/colorPrimaryLight"
-            app:layout_constraintRight_toLeftOf="@id/numberPickerTens" />
     </android.support.constraint.ConstraintLayout>
 </LinearLayout>

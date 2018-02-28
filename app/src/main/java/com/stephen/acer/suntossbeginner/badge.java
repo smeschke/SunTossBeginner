@@ -26,6 +26,9 @@ public class badge extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_badge);
 
+        //hide the action bar
+        getSupportActionBar().hide();
+
         //make toast to tell users to take screenshot and share
         Toast.makeText(this, "Press and hold\nvolume down + power\nto take a screenshot.",
                 Toast.LENGTH_SHORT).show();
@@ -51,7 +54,6 @@ public class badge extends AppCompatActivity {
         TextView juggler_name = (TextView) findViewById(R.id.jugglers_name);
         TextView juggler_level = (TextView) findViewById(R.id.levelId);
         ImageView levelIconView = (ImageView) findViewById(R.id.levelImage);
-        TextView juggler_data = (TextView) findViewById(R.id.trick_data);
         TextView total_catches_text_view = (TextView) findViewById(R.id.totalCatchesTextView);
 
         //set the text
@@ -59,21 +61,6 @@ public class badge extends AppCompatActivity {
         juggler_level.setText("Level: " + Double.toString(level) + " Juggler");
         levelIconView.setImageResource(level_icons[Math.round(overall_level) - 1]);
         total_catches_text_view.setText("Total Catches: " + total_catches);
-
-        //get the extra (the user's data) from the intent
-        ArrayList<String> user_data = getIntent().getStringArrayListExtra("user_data");
-        //write a header
-        juggler_data.append("Trick Name, # Catches\n");
-        //write each trick data individually
-        for (int idx = 1; idx < user_data.size(); idx++) {
-            //get the data for each trick
-            String trick_data = user_data.get(idx);
-            //parse users data
-            String trick_name = trick_data.split(",", 0)[0];
-            String num_catches = trick_data.split(",", 0)[1];
-            String output = trick_name + ", " + num_catches + "\n";
-            juggler_data.append(output);
-        }
     }
 }
 

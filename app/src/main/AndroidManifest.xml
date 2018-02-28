@@ -33,7 +33,8 @@
             android:name=".badge"
             android:label="Digital Badge"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".about"
+        <activity
+            android:name=".about"
             android:label="About"></activity>
     </application>
 
